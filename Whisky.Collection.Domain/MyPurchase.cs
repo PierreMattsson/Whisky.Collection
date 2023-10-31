@@ -2,10 +2,10 @@
 
 namespace Whisky.Collection.Domain;
 
-public class Purchase : BaseEntity
+public class MyPurchase : BaseEntity
 {
     public DateTime? PurchaseDate { get; set; }
     public int PurchaseCost { get; set; }
-    public Whisky? Whisky { get; set; }
+    public MyWhisky? Whisky { get; set; }
     public int WhiskyId { get; set; }
 }

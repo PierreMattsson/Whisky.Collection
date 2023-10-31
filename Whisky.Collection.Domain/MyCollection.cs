@@ -2,9 +2,9 @@
 
 namespace Whisky.Collection.Domain;
 
-public class Collection : BaseEntity
+public class MyCollection : BaseEntity
 {
     public string TasteDescription { get; set; } = string.Empty;
-    public Whisky? Whisky { get; set; }
+    public MyWhisky? Whisky { get; set; }
     public int WhiskyId { get; set; }
 }
