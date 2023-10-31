@@ -6,4 +6,5 @@ public class Collection : BaseEntity
 {
     public string TasteDescription { get; set; } = string.Empty;
     public Whisky? Whisky { get; set; }
+    public int WhiskyId { get; set; }
 }
