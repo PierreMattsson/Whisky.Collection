@@ -9,6 +9,8 @@ public class MyWhiskyProfile : Profile
     public MyWhiskyProfile()
     {
         // This mapping will look at the shared datatypes and map those
+        // So this will make it possible to convert from one type to another (Domain to DTO or other way aournd, thanks to reversemap)
+
         CreateMap<MyWhiskyDTO, MyWhisky>().ReverseMap();
     }
 }
