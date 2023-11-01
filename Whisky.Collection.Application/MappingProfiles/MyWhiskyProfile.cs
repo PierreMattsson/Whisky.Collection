@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Whisky.Collection.Application.Features.MyWhisky.Queries.GetAllMyWhisky;
+using Whisky.Collection.Application.Features.MyWhisky.Queries.GetMyWhiskyAll;
 using Whisky.Collection.Domain;
 
 namespace Whisky.Collection.Application.MappingProfiles;

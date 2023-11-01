@@ -2,7 +2,7 @@
 using MediatR;
 using Whisky.Collection.Application.Contracts.Persistence;
 
-namespace Whisky.Collection.Application.Features.MyWhisky.Queries.GetAllMyWhisky;
+namespace Whisky.Collection.Application.Features.MyWhisky.Queries.GetMyWhiskyAll;
 
 public class GetMyWhiskyQueryHandler : IRequestHandler<GetMyWhiskyQuery, List<MyWhiskyDTO>>
 {
