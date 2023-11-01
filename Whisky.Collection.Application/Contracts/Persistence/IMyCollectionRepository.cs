@@ -2,7 +2,7 @@
 
 namespace Whisky.Collection.Application.Contracts.Persistence;
 
-public interface IWhiskyRepository : IGenericRepository<MyWhisky>
+public interface IMyCollectionRepository : IGenericRepository<MyCollection>
 {
 
 }

@@ -7,17 +7,18 @@ namespace Whisky.Collection.Application.Features.MyWhisky.Queries.GetAllMyWhisky
 public class GetMyWhiskyQueryHandler : IRequestHandler<GetMyWhiskyQuery, List<MyWhiskyDTO>>
 {
     private readonly IMapper _mapper;
-    private readonly IWhiskyRepository _whiskyRepository;
+    private readonly IMyWhiskyRepository _myWhiskyRepository;
 
-    public GetMyWhiskyQueryHandler(IMapper mapper, IWhiskyRepository whiskyRepository)
+    // Dependency Injection / Constructor Injection
+    public GetMyWhiskyQueryHandler(IMapper mapper, IMyWhiskyRepository whiskyRepository)
     {
         _mapper = mapper;
-        _whiskyRepository = whiskyRepository;
+        _myWhiskyRepository = whiskyRepository;
     }
     public async Task<List<MyWhiskyDTO>> Handle(GetMyWhiskyQuery request, CancellationToken cancellationToken)
     {
         // Query the database
-        var myWhisky = await _whiskyRepository.GetAsync();
+        var myWhisky = await _myWhiskyRepository.GetAsync();
 
         // Convert data objects to DTO objects'
         var data = _mapper.Map<List<MyWhiskyDTO>>(myWhisky);
