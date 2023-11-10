@@ -9,13 +9,16 @@ public class GetMyWhiskyQueryHandler : IRequestHandler<GetMyWhiskyQuery, List<My
     private readonly IMapper _mapper;
     private readonly IMyWhiskyRepository _myWhiskyRepository;
 
-    // Dependency Injection / Constructor Injection
-    public GetMyWhiskyQueryHandler(IMapper mapper, IMyWhiskyRepository whiskyRepository)
+    public GetMyWhiskyQueryHandler(
+        IMapper mapper,
+        IMyWhiskyRepository whiskyRepository)
     {
         _mapper = mapper;
         _myWhiskyRepository = whiskyRepository;
     }
-    public async Task<List<MyWhiskyDTO>> Handle(GetMyWhiskyQuery request, CancellationToken cancellationToken)
+    public async Task<List<MyWhiskyDTO>> Handle(
+        GetMyWhiskyQuery request,
+        CancellationToken cancellationToken)
     {
         // Query the database
         var myWhisky = await _myWhiskyRepository.GetAsync();
