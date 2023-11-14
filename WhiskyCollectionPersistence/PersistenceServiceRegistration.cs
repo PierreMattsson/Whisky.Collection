@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Whisky.Collection.Application.Contracts.Persistence;
 using WhiskyCollectionPersistence.DatabaseContext;
+using WhiskyCollectionPersistence.Repository;
 
 namespace WhiskyCollectionPersistence;
 
@@ -15,6 +17,9 @@ public static class PersistenceServiceRegistration
         {
             options.UseSqlite(configuration.GetConnectionString("MyWhiskyDatabaseConnectionString"));
         });
+
+        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        services.AddScoped<IMyWhiskyRepository, MyWhiskyRepository>();
 
         return services;
     }
