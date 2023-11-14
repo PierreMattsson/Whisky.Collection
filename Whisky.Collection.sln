@@ -15,9 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{7A4A917F-D457-4DE0-8E75-A4BB0881DE28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whisky.Collection.Domain", "Whisky.Collection.Domain\Whisky.Collection.Domain.csproj", "{010D1CB7-B38C-40CD-A3BF-9F7C926400DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whisky.Collection.Domain", "Whisky.Collection.Domain\Whisky.Collection.Domain.csproj", "{010D1CB7-B38C-40CD-A3BF-9F7C926400DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whisky.Collection.Application", "Whisky.Collection.Application\Whisky.Collection.Application.csproj", "{34CCA0DB-CCF0-4AA2-A2B4-82F4EDA3EA75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whisky.Collection.Application", "Whisky.Collection.Application\Whisky.Collection.Application.csproj", "{34CCA0DB-CCF0-4AA2-A2B4-82F4EDA3EA75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhiskyCollectionPersistence", "WhiskyCollectionPersistence\WhiskyCollectionPersistence.csproj", "{9305BA32-CF0B-4226-9389-07C1DAF37774}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{34CCA0DB-CCF0-4AA2-A2B4-82F4EDA3EA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34CCA0DB-CCF0-4AA2-A2B4-82F4EDA3EA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34CCA0DB-CCF0-4AA2-A2B4-82F4EDA3EA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9305BA32-CF0B-4226-9389-07C1DAF37774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9305BA32-CF0B-4226-9389-07C1DAF37774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9305BA32-CF0B-4226-9389-07C1DAF37774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9305BA32-CF0B-4226-9389-07C1DAF37774}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{7A4A917F-D457-4DE0-8E75-A4BB0881DE28} = {6EA08D7B-86FD-4FFC-BD9A-B29902712972}
 		{010D1CB7-B38C-40CD-A3BF-9F7C926400DA} = {F32ABBA0-812D-4308-8296-1DEBD6FB6175}
 		{34CCA0DB-CCF0-4AA2-A2B4-82F4EDA3EA75} = {F32ABBA0-812D-4308-8296-1DEBD6FB6175}
+		{9305BA32-CF0B-4226-9389-07C1DAF37774} = {0518CCD9-A2FF-42AB-A75A-CE4CC2E3C5CB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69D52B3C-5C56-4FD4-918F-F36FEE194351}
