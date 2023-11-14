@@ -6,6 +6,7 @@ namespace Whisky.Collection.Application.Features.MyWhisky.Commands.UpdateMyWhisk
 // So we have to return something but we don't nessesarly expect a return type, we use Unit.
 public class UpdateMyWhiskyCommand : IRequest<Unit>
 {
+    public int Id { get; set; }
     public string ProducerName { get; set; } = string.Empty;
     public string WhiskyName { get; set; } = string.Empty;
     public int WhiskyYearStatement { get; set; }
