@@ -16,7 +16,9 @@ namespace Whisky.Collection.Application.Features.MyWhisky.Commands.UpdateMyWhisk
             _mapper = mapper;
             _myWhiskyRepository = myWhiskyRepository;
         }
-        public async Task<Unit> Handle(UpdateMyWhiskyCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(
+            UpdateMyWhiskyCommand request, 
+            CancellationToken cancellationToken)
         {
             // Validate incoming data
 

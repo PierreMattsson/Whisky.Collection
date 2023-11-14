@@ -16,7 +16,9 @@ public class CreateMyWhiskyCommandHandler : IRequestHandler<CreateMyWhiskyComman
         _mapper = mapper;
         _myWhiskyRepository = myWhiskyRepository;
     }
-    public async Task<int> Handle(CreateMyWhiskyCommand request, CancellationToken cancellationToken)
+    public async Task<int> Handle(
+        CreateMyWhiskyCommand request, 
+        CancellationToken cancellationToken)
     {
         // Validate incoming data
 
