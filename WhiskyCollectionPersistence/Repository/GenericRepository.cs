@@ -28,12 +28,19 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 
     public async Task<IReadOnlyList<T>> GetAsync()
     {
-        return await _context.Set<T>().ToListAsync();
+        // No Tracking improve preformance
+        // Don't need to track for changes when we use API
+        // (As we don't know when changes will be submited)
+        return await _context.Set<T>()
+            .AsNoTracking()
+            .ToListAsync();
     }
 
     public async Task<T> GetByIdAsync(int id)
     {
-        return await _context.Set<T>().FindAsync(id);
+        return await _context.Set<T>()
+            .AsNoTracking()
+            .FirstOrDefaultAsync(q => q.Id == id);
     }
 
     public async Task UpdateAsync(T entity)
