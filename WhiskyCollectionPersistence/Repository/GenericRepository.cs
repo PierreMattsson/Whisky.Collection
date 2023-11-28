@@ -35,14 +35,14 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
             .AsNoTracking()
             .ToListAsync();
     }
-
+#nullable disable
     public async Task<T> GetByIdAsync(int id)
     {
         return await _context.Set<T>()
             .AsNoTracking()
             .FirstOrDefaultAsync(q => q.Id == id);
     }
-
+#nullable enable
     public async Task UpdateAsync(T entity)
     {
         _context.Entry(entity).State = EntityState.Modified;
