@@ -11,6 +11,10 @@ public class UpdateMyWhiskyCommandValidator : AbstractValidator<UpdateMyWhiskyCo
     {
         _myWhiskyRepository = myWhiskyRepository;
 
+        RuleFor(p => p.Id)
+            .NotNull()
+            .MustAsync(MyWhiskyMustExist);
+
         RuleFor(p => p.ProducerName)
             .NotEmpty().WithMessage("{PropertyName} is required")
             .NotNull();
@@ -33,10 +37,6 @@ public class UpdateMyWhiskyCommandValidator : AbstractValidator<UpdateMyWhiskyCo
         RuleFor(p => p.BottleDescription)
             .NotEmpty().WithMessage("{PropertyName} is required")
             .NotNull();
-
-        RuleFor(p => p.Id)
-            .NotNull()
-            .MustAsync(MyWhiskyMustExist);
     }
 
     private async Task<bool> MyWhiskyMustExist(int id, CancellationToken token)
