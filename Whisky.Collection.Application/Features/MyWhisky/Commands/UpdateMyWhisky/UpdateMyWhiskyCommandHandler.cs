@@ -13,7 +13,7 @@ namespace Whisky.Collection.Application.Features.MyWhisky.Commands.UpdateMyWhisk
         private readonly IAppLogger<UpdateMyWhiskyCommandHandler> _logger;
 
         public UpdateMyWhiskyCommandHandler(
-            IMapper mapper, 
+            IMapper mapper,
             IMyWhiskyRepository myWhiskyRepository,
             IAppLogger<UpdateMyWhiskyCommandHandler> logger)
         {
@@ -22,7 +22,7 @@ namespace Whisky.Collection.Application.Features.MyWhisky.Commands.UpdateMyWhisk
             _logger = logger;
         }
         public async Task<Unit> Handle(
-            UpdateMyWhiskyCommand request, 
+            UpdateMyWhiskyCommand request,
             CancellationToken cancellationToken)
         {
             // Validate incoming data

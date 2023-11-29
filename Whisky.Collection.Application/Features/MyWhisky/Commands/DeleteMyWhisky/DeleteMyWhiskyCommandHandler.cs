@@ -14,7 +14,7 @@ public class DeleteMyWhiskyCommandHandler : IRequestHandler<DeleteMyWhiskyComman
         _myWhiskyRepository = myWhiskyRepository;
     }
     public async Task<Unit> Handle(
-        DeleteMyWhiskyCommand request, 
+        DeleteMyWhiskyCommand request,
         CancellationToken cancellationToken)
     {
         // Retrive domain entity object 

@@ -11,14 +11,14 @@ public class CreateMyWhiskyCommandHandler : IRequestHandler<CreateMyWhiskyComman
     private readonly IMyWhiskyRepository _myWhiskyRepository;
 
     public CreateMyWhiskyCommandHandler(
-        IMapper mapper, 
+        IMapper mapper,
         IMyWhiskyRepository myWhiskyRepository)
     {
         _mapper = mapper;
         _myWhiskyRepository = myWhiskyRepository;
     }
     public async Task<int> Handle(
-        CreateMyWhiskyCommand request, 
+        CreateMyWhiskyCommand request,
         CancellationToken cancellationToken)
     {
         // Validate incoming data

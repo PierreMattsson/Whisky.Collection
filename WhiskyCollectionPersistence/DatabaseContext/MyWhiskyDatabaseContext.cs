@@ -8,7 +8,7 @@ public class MyWhiskyDatabaseContext : DbContext
 {
     public MyWhiskyDatabaseContext(DbContextOptions<MyWhiskyDatabaseContext> options) : base(options)
     {
-        
+
     }
 
     public DbSet<MyWhisky> MyWhiskies { get; set; }

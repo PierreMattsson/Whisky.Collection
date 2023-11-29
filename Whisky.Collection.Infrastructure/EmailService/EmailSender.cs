@@ -8,7 +8,7 @@ namespace Whisky.Collection.Infrastructure.EmailService;
 
 public class EmailSender : IEmailSender
 {
-    public EmailSettings _emailSettings {  get; }
+    public EmailSettings _emailSettings { get; }
 
     public EmailSender(IOptions<EmailSettings> emailSettings)
     {
@@ -25,10 +25,10 @@ public class EmailSender : IEmailSender
         };
 
         var message = MailHelper.CreateSingleEmail(
-            from, 
-            to, 
-            email.Subject, 
-            email.Body, 
+            from,
+            to,
+            email.Subject,
+            email.Body,
             email.Body);
 
         var response = await client.SendEmailAsync(message);

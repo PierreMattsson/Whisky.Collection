@@ -14,8 +14,8 @@ public class MyWhiskyRepository : GenericRepository<MyWhisky>, IMyWhiskyReposito
     }
 
     public async Task<bool> IsMyWhiskyUnique(
-        string producerName, 
-        string whiskyName, 
+        string producerName,
+        string whiskyName,
         int whiskyYearStatement)
     {
         return await _context.MyWhiskies.AnyAsync(
