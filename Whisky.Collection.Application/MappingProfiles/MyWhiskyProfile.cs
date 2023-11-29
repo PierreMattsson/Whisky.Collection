@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Whisky.Collection.Application.Features.MyWhisky.Commands.CreateMyWhisky;
+using Whisky.Collection.Application.Features.MyWhisky.Commands.UpdateMyWhisky;
 using Whisky.Collection.Application.Features.MyWhisky.Queries.GetMyWhiskyAll;
 using Whisky.Collection.Application.Features.MyWhisky.Queries.GetMyWhiskyDetails;
 using Whisky.Collection.Domain;
@@ -14,5 +16,7 @@ public class MyWhiskyProfile : Profile
 
         CreateMap<MyWhiskyDTO, MyWhisky>().ReverseMap();
         CreateMap<MyWhisky, MyWhiskyDetailsDTO>();
+        CreateMap<CreateMyWhiskyCommand, MyWhisky>();
+        CreateMap<UpdateMyWhiskyCommand, MyWhisky>();
     }
 }

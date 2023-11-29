@@ -1,3 +1,4 @@
+using Whisky.Collection.Api.Middleware;
 using Whisky.Collection.Application;
 using Whisky.Collection.Infrastructure;
 using WhiskyCollectionPersistence;
@@ -24,6 +25,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

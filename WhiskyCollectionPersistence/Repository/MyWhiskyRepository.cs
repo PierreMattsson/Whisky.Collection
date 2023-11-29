@@ -21,6 +21,6 @@ public class MyWhiskyRepository : GenericRepository<MyWhisky>, IMyWhiskyReposito
         return await _context.MyWhiskies.AnyAsync(
             q => q.ProducerName == producerName &&
             q.WhiskyName == whiskyName &&
-            q.WhiskyYearStatement == whiskyYearStatement);
+            q.WhiskyYearStatement == whiskyYearStatement) == false;
     }
 }
