@@ -6,7 +6,7 @@ namespace Whisky.Collection.Application.UnitTests.Mocks;
 
 public class MockMyWhiskyRepository
 {
-    public static Mock<IMyWhiskyRepository> GetMyWhiskyMockMyWhiskyRepository()
+    public static Mock<IMyWhiskyRepository> GetMockMyWhiskyRepository()
     {
         var myWhiskys = new List<MyWhisky>
         {
@@ -41,6 +41,22 @@ public class MockMyWhiskyRepository
                     myWhiskys.Add(myWhisky);
                     return Task.CompletedTask;
                 });
+
+        mockRepo.Setup(r => r.IsMyWhiskyUnique(
+            It.IsAny<string>(), 
+            It.IsAny<string>(), 
+            It.IsAny<int>()))
+
+            .ReturnsAsync((
+                string producerName, 
+                string whiskyName, 
+                int whiskyYearStatement) =>
+            {
+                return !myWhiskys.Any(q => 
+                    q.ProducerName == producerName && 
+                    q.WhiskyName == whiskyName &&
+                    q.WhiskyYearStatement == whiskyYearStatement);
+            });
 
         return mockRepo;
     }
