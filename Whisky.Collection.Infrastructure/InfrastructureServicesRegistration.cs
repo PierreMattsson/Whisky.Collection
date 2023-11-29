@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Whisky.Collection.Application.Contracts.Email;
+using Whisky.Collection.Application.Models.Email;
+using Whisky.Collection.Infrastructure.EmailService;
 
 namespace Whisky.Collection.Infrastructure;
 
@@ -9,6 +12,9 @@ public static class InfrastructureServicesRegistration
         this IServiceCollection services, 
         IConfiguration configuration)
     {
+        services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+        services.AddTransient<IEmailSender, EmailSender>();
+
         return services;
     }
 }
