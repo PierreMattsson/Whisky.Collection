@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhiskyCollectionPersistence
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whisky.Collection.Infrastructure", "Whisky.Collection.Infrastructure\Whisky.Collection.Infrastructure.csproj", "{28D8DA37-52F7-4FEE-B28A-704C7BF59086}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whisky.Collection.Api", "Whisky.Collection.Api\Whisky.Collection.Api.csproj", "{39AF5A0A-15B6-4D6F-9246-2CB4C79155C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{28D8DA37-52F7-4FEE-B28A-704C7BF59086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28D8DA37-52F7-4FEE-B28A-704C7BF59086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28D8DA37-52F7-4FEE-B28A-704C7BF59086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39AF5A0A-15B6-4D6F-9246-2CB4C79155C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39AF5A0A-15B6-4D6F-9246-2CB4C79155C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39AF5A0A-15B6-4D6F-9246-2CB4C79155C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39AF5A0A-15B6-4D6F-9246-2CB4C79155C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{34CCA0DB-CCF0-4AA2-A2B4-82F4EDA3EA75} = {F32ABBA0-812D-4308-8296-1DEBD6FB6175}
 		{9305BA32-CF0B-4226-9389-07C1DAF37774} = {0518CCD9-A2FF-42AB-A75A-CE4CC2E3C5CB}
 		{28D8DA37-52F7-4FEE-B28A-704C7BF59086} = {0518CCD9-A2FF-42AB-A75A-CE4CC2E3C5CB}
+		{39AF5A0A-15B6-4D6F-9246-2CB4C79155C4} = {AA16A744-E3CC-4FB8-BCAB-48AD85A25CAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69D52B3C-5C56-4FD4-918F-F36FEE194351}
