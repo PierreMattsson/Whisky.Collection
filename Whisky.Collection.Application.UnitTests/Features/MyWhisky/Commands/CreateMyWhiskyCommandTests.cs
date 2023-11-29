@@ -41,6 +41,6 @@ public class CreateMyWhiskyCommandTests
         }, CancellationToken.None);
 
         var myWhiskies = await _mockRepo.Object.GetAsync();
-        //myWhiskies.Count.ShouldBe(4);
+        myWhiskies.Count.ShouldBe(4);
     }
 }
