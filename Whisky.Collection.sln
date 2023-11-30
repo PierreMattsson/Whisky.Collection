@@ -25,11 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whisky.Collection.Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whisky.Collection.Api", "Whisky.Collection.Api\Whisky.Collection.Api.csproj", "{39AF5A0A-15B6-4D6F-9246-2CB4C79155C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whisky.Collection.Application.UnitTests", "Whisky.Collection.Application.UnitTests\Whisky.Collection.Application.UnitTests.csproj", "{11CC30E2-D20D-45E1-AA56-C427D7D9A1BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whisky.Collection.Application.UnitTests", "Whisky.Collection.Application.UnitTests\Whisky.Collection.Application.UnitTests.csproj", "{11CC30E2-D20D-45E1-AA56-C427D7D9A1BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whisky.Collection.Persistance.IntegrationTests", "Whisky.Collection.Persistance.IntegrationTests\Whisky.Collection.Persistance.IntegrationTests.csproj", "{C73E03CC-4249-4A50-8376-311CE5799DD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whisky.Collection.Persistance.IntegrationTests", "Whisky.Collection.Persistance.IntegrationTests\Whisky.Collection.Persistance.IntegrationTests.csproj", "{C73E03CC-4249-4A50-8376-311CE5799DD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whisky.Collection.BlazorUI", "Whisky.Collection.BlazorUI\Whisky.Collection.BlazorUI.csproj", "{9728A27F-8205-4FA0-ACEA-02D1CD33F1DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whisky.Collection.BlazorUI", "Whisky.Collection.BlazorUI\Whisky.Collection.BlazorUI.csproj", "{9728A27F-8205-4FA0-ACEA-02D1CD33F1DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,72 @@
+﻿@page "/mywhiskys/"
+<h3>My Whisky</h3>
+
+<div class="m-2 d-flex justify-content-end">
+    <button @onclick="CreateMyWhisky" class="btn btn-success">Add My Whisky</button>
+</div>
+
+@if (string.IsNullOrEmpty(Message) == false)
+{
+    <div class="alert alert-danger">
+        @Message
+    </div>
+}
+
+@if (MyWhiskys == null)
+{
+    <p>Loading Data...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    ProducerName
+                </th>
+                <th>
+                    WhiskyName
+                </th>
+                <th>
+                    WhiskyYearStatement
+                </th>
+                <th>
+                    BottleDescription
+                </th>
+                <th>
+                    AlkoholProcent
+                </th>
+                <th>
+                    BottleContentMilliliter
+                </th>
+                <th>Actions</th>                                                        
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var myWhisky in MyWhiskys)
+            {
+                <tr>
+                    <td>@myWhisky.Id</td>
+                    <td>@myWhisky.ProducerName</td>
+                    <td>@myWhisky.WhiskyName</td>
+                    <td>@myWhisky.WhiskyYearStatement</td>
+                    <td>@myWhisky.BottleDescription</td>
+                    <td>@myWhisky.AlkoholProcent</td>
+                    <td>@myWhisky.BottleContentMilliliter</td>
+                    <td>
+                        <button @onclick=@(() => AllocateMyWhisky(myWhisky.Id))
+                                class="btn btn-dark">
+                                Allocate Whisky
+                        </button>
+                        <button @onclick="@(() => EditMyWhisky(myWhisky.Id))" class="btn btn-warning">Edit</button>
+                        <button @onclick="@(() => DetailsMyWhisky(myWhisky.Id))" class="btn btn-info">Details</button>
+                        <button @onclick="@(() => DeleteMyWhisky(myWhisky.Id))" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
