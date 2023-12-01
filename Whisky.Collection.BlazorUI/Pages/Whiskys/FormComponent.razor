@@ -1,0 +1,65 @@
+﻿
+
+<EditForm Model="@MyWhisky" OnValidSubmit="@OnValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <fieldset disabled="@Disabled">
+        <div class="form-group">
+            <label>ProducerName:</label>
+            <div>
+                <InputText @bind-Value="@MyWhisky.ProducerName" class="form-control" />
+                <ValidationMessage For="@(() => MyWhisky.ProducerName)" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>WhiskyName:</label>
+            <div>
+                <InputText @bind-Value="@MyWhisky.WhiskyName" class="form-control" />
+                <ValidationMessage For="@(() => MyWhisky.WhiskyName)" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>ProducerName:</label>
+            <div>
+                <InputText @bind-Value="@MyWhisky.ProducerName" class="form-control" />
+                <ValidationMessage For="@(() => MyWhisky.ProducerName)" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>WhiskyYearStatement:</label>
+            <div>
+                <InputNumber @bind-Value="@MyWhisky.WhiskyYearStatement" class="form-control" />
+                <ValidationMessage For="@(() => MyWhisky.WhiskyYearStatement)" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>BottleDescription:</label>
+            <div>
+                <InputNumber @bind-Value="@MyWhisky.BottleDescription" class="form-control" />
+                <ValidationMessage For="@(() => MyWhisky.BottleDescription)" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>AlkoholProcent:</label>
+            <div>
+                <InputNumber @bind-Value="@MyWhisky.AlkoholProcent" class="form-control" />
+                <ValidationMessage For="@(() => MyWhisky.AlkoholProcent)" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>BottleContentMilliliter:</label>
+            <div>
+                <InputNumber @bind-Value="@MyWhisky.BottleContentMilliliter" class="form-control" />
+                <ValidationMessage For="@(() => MyWhisky.BottleContentMilliliter)" />
+            </div>
+        </div>
+    </fieldset>
+    @if (!Disabled)
+        {
+            <button type="submit" class="btn btn-success btn-block">
+                @ButtonText
+            </button>
+        }
+        <BackToList Target="mywhiskys" />
+</EditForm>
