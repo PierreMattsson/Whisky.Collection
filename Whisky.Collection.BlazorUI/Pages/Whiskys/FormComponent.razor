@@ -20,13 +20,6 @@
             </div>
         </div>
         <div class="form-group">
-            <label>ProducerName:</label>
-            <div>
-                <InputText @bind-Value="@MyWhisky.ProducerName" class="form-control" />
-                <ValidationMessage For="@(() => MyWhisky.ProducerName)" />
-            </div>
-        </div>
-        <div class="form-group">
             <label>WhiskyYearStatement:</label>
             <div>
                 <InputNumber @bind-Value="@MyWhisky.WhiskyYearStatement" class="form-control" />
@@ -36,7 +29,7 @@
         <div class="form-group">
             <label>BottleDescription:</label>
             <div>
-                <InputNumber @bind-Value="@MyWhisky.BottleDescription" class="form-control" />
+                <InputText @bind-Value="@MyWhisky.BottleDescription" class="form-control" />
                 <ValidationMessage For="@(() => MyWhisky.BottleDescription)" />
             </div>
         </div>

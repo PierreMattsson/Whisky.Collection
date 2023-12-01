@@ -704,6 +704,26 @@ namespace Whisky.Collection.BlazorUI.Services.Base
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]   
         public string WhiskyName { get; set; }
 
+        [System.Text.Json.Serialization.JsonPropertyName("whiskyYearStatement")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]   
+        public int WhiskyYearStatement { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("bottleDescription")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]   
+        public string BottleDescription { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("alkoholProcent")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]   
+        public double AlkoholProcent { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("bottleContentMilliliter")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]   
+        public int BottleContentMilliliter { get; set; }
+
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.0.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
