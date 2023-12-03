@@ -57,10 +57,10 @@ else
                     <td>@myWhisky.AlkoholProcent</td>
                     <td>@myWhisky.BottleContentMilliliter</td>
                     <td>
-                        <button @onclick=@(() => AllocateMyWhisky(myWhisky.Id))
+@*                         <button @onclick=@(() => AllocateMyWhisky(myWhisky.Id))
                                 class="btn btn-dark">
                                 Allocate Whisky
-                        </button>
+                        </button> *@
                         <button @onclick="@(() => EditMyWhisky(myWhisky.Id))" class="btn btn-warning">Edit</button>
                         <button @onclick="@(() => DetailsMyWhisky(myWhisky.Id))" class="btn btn-info">Details</button>
                         <button @onclick="@(() => DeleteMyWhisky(myWhisky.Id))" class="btn btn-danger">Delete</button>

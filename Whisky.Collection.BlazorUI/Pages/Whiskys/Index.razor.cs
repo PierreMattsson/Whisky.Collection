@@ -19,11 +19,6 @@ public partial class Index
         NavigationManager?.NavigateTo("/mywhiskys/create/");
     }
 
-    protected void AllocateMyWhisky(int id)
-    {
-        // Use Whisky ALlocation Service here
-    }
-
     protected void EditMyWhisky(int id)
     {
         NavigationManager?.NavigateTo($"/mywhiskys/edit/{id}");
