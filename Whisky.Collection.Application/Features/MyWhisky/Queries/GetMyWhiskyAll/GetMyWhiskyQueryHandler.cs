@@ -31,7 +31,7 @@ public class GetMyWhiskyQueryHandler : IRequestHandler<GetMyWhiskyQuery, List<My
         var data = _mapper.Map<List<MyWhiskyDTO>>(myWhisky);
 
         // Return list of DTO objec
-        _logger.LogInformation("Leave types were retrived successfullt");
+        _logger.LogInformation("All Whisky were retrived successfullt");
         return data;
     }
 }

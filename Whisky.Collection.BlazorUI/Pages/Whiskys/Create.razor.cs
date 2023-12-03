@@ -1,4 +1,3 @@
-using Blazored.Toast.Services;
 using Microsoft.AspNetCore.Components;
 using Whisky.Collection.BlazorUI.Contracts;
 using Whisky.Collection.BlazorUI.Models.MyWhiskys;
@@ -11,21 +10,18 @@ public partial class Create
     NavigationManager _navManager { get; set; }
     [Inject]
     IMyWhiskyService _client { get; set; }
-    //[Inject]
-    //IToastService toastService { get; set; }
     public string Message { get; private set; }
 
     MyWhiskyVM myWhisky = new();
 
     async Task CreateMyWhisky()
     {
-        var repsonse = await _client.CreateMyWhisky(myWhisky);
-        if (repsonse.Success)
+        var response = await _client.CreateMyWhisky(myWhisky);
+        if (response.Success)
         {
-            //toastService.ShowSuccess("Whisky created successfully");
-            //toastService.ShowToast(ToastLevel.Info, "Test");
             _navManager.NavigateTo("/mywhiskys/");
         }
-        Message = repsonse.Message;
+        Message = response.Message;
     }
+
 }
