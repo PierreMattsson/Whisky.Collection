@@ -34,7 +34,7 @@ public partial class Index
         var response = await MyWhiskyService.DeleteMyWhisky(id);
         if (response.Success)
         {
-            StateHasChanged();
+            await OnInitializedAsync();
         }
         else
         {
