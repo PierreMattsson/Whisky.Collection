@@ -7,7 +7,6 @@ namespace WhiskyCollectionPersistence.Repository;
 
 public class MyWhiskyRepository : GenericRepository<MyWhisky>, IMyWhiskyRepository
 {
-    // Take a copy from the IoC and use it here.
     // Call the base so we can use the "protected" _context and use it here.
     public MyWhiskyRepository(MyWhiskyDatabaseContext context) : base(context)
     {

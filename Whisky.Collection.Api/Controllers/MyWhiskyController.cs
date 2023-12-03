@@ -24,16 +24,16 @@ namespace Whisky.Collection.Api.Controllers
         [HttpGet]
         public async Task<List<MyWhiskyDTO>> Get()
         {
-            var leaveTypes = await _mediator.Send(new GetMyWhiskyQuery());
-            return leaveTypes;
+            var myWhisky = await _mediator.Send(new GetMyWhiskyQuery());
+            return myWhisky;
         }
 
         // GET api/<MyWhiskyController>/5
         [HttpGet("{id}")]
         public async Task<ActionResult<MyWhiskyDetailsDTO>> Get(int id)
         {
-            var leaveTypesDetails = await _mediator.Send(new GetMyWhiskyDetailsQuery(id));
-            return leaveTypesDetails;
+            var myWhiskyDetails = await _mediator.Send(new GetMyWhiskyDetailsQuery(id));
+            return myWhiskyDetails;
         }
 
         // POST api/<MyWhiskyController>
