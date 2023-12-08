@@ -20,7 +20,7 @@ public class BaseHttpService
                 Success = false
             };
         }
-        if (ex.StatusCode == 404)
+        else if (ex.StatusCode == 404)
         {
             return new Response<Guid>()
             {
