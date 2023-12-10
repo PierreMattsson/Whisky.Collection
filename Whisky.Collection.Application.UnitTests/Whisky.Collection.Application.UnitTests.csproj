@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Whisky.Collection.Application\Whisky.Collection.Application.csproj" />
+    <ProjectReference Include="..\WhiskyCollectionPersistence\WhiskyCollectionPersistence.csproj" />
   </ItemGroup>
 
 </Project>

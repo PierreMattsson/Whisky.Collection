@@ -12,20 +12,23 @@ public class MockMyWhiskyRepository
         {
             new() {
                 Id = 1,
-                WhiskyName = "Test",
-                ProducerName = "Test"
+                WhiskyName = "Test1",
+                ProducerName = "Test1",
+                WhiskyYearStatement = 12
             },
             new()
             {
                 Id = 2,
                 WhiskyName = "Test2",
-                ProducerName = "Test2"
+                ProducerName = "Test2",
+                WhiskyYearStatement = 12
             },
             new()
             {
                 Id = 3,
                 WhiskyName = "Test3",
-                ProducerName = "Test3"
+                ProducerName = "Test3",
+                WhiskyYearStatement = 12
             }
         };
 

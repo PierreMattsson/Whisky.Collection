@@ -32,7 +32,7 @@ public class CreateMyWhiskyCommandTests
 
         await handler.Handle(new CreateMyWhiskyCommand()
         {
-            ProducerName = "Macallan1",
+            ProducerName = "Macallan",
             WhiskyName = "Double Cask",
             WhiskyYearStatement = 12,
             BottleDescription = "Highland Single Malt Scotch Whisky",
