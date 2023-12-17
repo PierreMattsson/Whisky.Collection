@@ -22,9 +22,6 @@ else
         <thead>
             <tr>
                 <th>
-                    Id
-                </th>
-                <th>
                     ProducerName
                 </th>
                 <th>
@@ -49,7 +46,6 @@ else
             @foreach (var myWhisky in MyWhiskys)
             {
                 <tr>
-                    <td>@myWhisky.Id</td>
                     <td>@myWhisky.ProducerName</td>
                     <td>@myWhisky.WhiskyName</td>
                     <td>@myWhisky.WhiskyYearStatement</td>
@@ -61,8 +57,8 @@ else
                                 class="btn btn-dark">
                                 Allocate Whisky
                         </button> *@
-                        <button @onclick="@(() => EditMyWhisky(myWhisky.Id))" class="btn btn-warning">Edit</button>
-                        <button @onclick="@(() => DetailsMyWhisky(myWhisky.Id))" class="btn btn-info">Details</button>
+                        @* <button @onclick="@(() => EditMyWhisky(myWhisky.Id))" class="btn btn-warning">Edit</button>*@
+                        @*<button @onclick="@(() => DetailsMyWhisky(myWhisky.Id))" class="btn btn-info">Details</button>*@
                         <button @onclick="@(() => DeleteMyWhisky(myWhisky.Id))" class="btn btn-danger">Delete</button>
                     </td>
                 </tr>

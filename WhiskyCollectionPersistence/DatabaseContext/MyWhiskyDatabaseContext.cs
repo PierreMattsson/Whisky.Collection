@@ -12,8 +12,8 @@ public class MyWhiskyDatabaseContext : DbContext
     }
 
     public DbSet<MyWhisky> MyWhiskies { get; set; }
-    public DbSet<MyCollection> myCollections { get; set; }
-    public DbSet<MyPurchase> myPurchase { get; set; }
+    public DbSet<MyCollection> MyCollections { get; set; }
+    public DbSet<MyPurchase> MyPurchase { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

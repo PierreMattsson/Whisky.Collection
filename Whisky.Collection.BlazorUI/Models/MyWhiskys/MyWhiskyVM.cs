@@ -27,6 +27,6 @@ public class MyWhiskyVM
     public double AlkoholProcent { get; set; }
 
     [Required]
-    [Display(Name = "Size of the bottle in milliliter")]
+    [Display(Name = "Bottle in milliliter")]
     public int BottleContentMilliliter { get; set; }
 }
